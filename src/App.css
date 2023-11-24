@@ -1,0 +1,16 @@
+.titel{
+  text-align: center;
+}
+.box-row{
+  display: flex;
+  justify-content: center;
+}
+.box{
+  
+  height: 80px;
+  width: 80px;
+}
+.b1{
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
