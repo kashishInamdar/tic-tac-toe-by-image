@@ -22,7 +22,9 @@ function App() {
   })
 
   const play = (boxNo) => {
-    
+    if(board[boxNo] !== ""){
+      return ;
+    }
     if(player === 1){
       setBoard({...board, [boxNo]: <img src={X} alt="xo" className='X-O-img' />} )
     }
