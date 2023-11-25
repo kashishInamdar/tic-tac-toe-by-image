@@ -22,7 +22,14 @@ function App() {
   })
 
   const play = (boxNo) => {
-    console.log( `box No : ${boxNo}`  )
+    
+    if(player === 1){
+      setBoard({...board, [boxNo]: <img src={X} alt="xo" className='X-O-img' />} )
+    }
+    else{
+      setBoard({...board, [boxNo]: <img src={O} alt="xo" className='X-O-img' />} )
+    }
+    setPlayer(player === 1 ? 2 : 1)
 
   }
 
@@ -71,9 +78,9 @@ function App() {
 
         </div>
         <div className='players-container'>
-          <p className='player'> <img src={X} alt="xo-image" className='X-O-player' /> :  Player 1  </p>
+          <p className='player'> <img src={X} alt="xo" className='X-O-player' /> :  Player 1  </p>
 
-          <p className='player'> <img src={O} alt="xo-image" className='X-O-player' /> : Player 2 </p>
+          <p className='player'> <img src={O} alt="xo" className='X-O-player' /> : Player 2 </p>
         </div>
 
       </div>
